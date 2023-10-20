@@ -158,9 +158,6 @@ public class Hand implements Iterable<Card>, Comparable<Hand> {
 
   @Override
   public String toString() {
-    return "Hand{" +
-      "aCards=" + aCards +
-      ", aMaxCards=" + aMaxCards +
-      '}';
+    return "Hand{" + "aCards=" + aCards + ", aMaxCards=" + aMaxCards + '}';
   }
 }

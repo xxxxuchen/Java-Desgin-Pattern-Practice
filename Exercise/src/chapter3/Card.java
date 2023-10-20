@@ -87,9 +87,6 @@ public class Card implements Comparable<Card> {
 
   @Override
   public String toString() {
-    return "Card{" +
-      "aRank=" + aRank +
-      ", aSuit=" + aSuit +
-      '}';
+    return "Card{" + "aRank=" + aRank + ", aSuit=" + aSuit + '}';
   }
 }
