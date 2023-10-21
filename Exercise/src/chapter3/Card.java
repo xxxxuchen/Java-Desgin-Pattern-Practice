@@ -24,6 +24,7 @@ import java.util.Objects;
 public class Card implements Comparable<Card> {
   private Rank aRank;
   private Suit aSuit;
+  private static int myInt;
 
   @Override
   public boolean equals(Object o) {

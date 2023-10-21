@@ -1,4 +1,4 @@
-package chapter3;
+package chapter5;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,5 +9,4 @@ public class JUnitTest {
   public void testAbs_Positive() {
     assertEquals(5, Math.abs(5));
   }
-
 }
