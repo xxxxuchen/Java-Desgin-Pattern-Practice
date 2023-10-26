@@ -121,4 +121,3 @@ public class Deck implements CardSource, Iterable<Card>, Comparable<Deck> {
     return aCards.size() - o.aCards.size();
   }
 }
-
