@@ -113,11 +113,11 @@ public class Deck implements CardSource, Iterable<Card>, Comparable<Deck> {
       System.out.println(card);
     }
     Hand hand = new Hand(3);
-
   }
 
   @Override
   public int compareTo(Deck o) {
     return aCards.size() - o.aCards.size();
   }
+
 }
