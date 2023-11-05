@@ -33,7 +33,8 @@ public class CompositeCardSource implements CardSource
 	{
 		aElements = Arrays.asList(pCardSources);
 	}
-	
+
+
 	@Override
 	public Card draw()
 	{
