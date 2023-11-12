@@ -6,30 +6,27 @@
  *
  * This code is licensed under a Creative Commons 
  * Attribution-NonCommercial-NoDerivatives 4.0 International License.
- *
+ * 
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter6;
-
-import chapter4.Card;
+package chapter6.exercise;
 
 /**
- * Represents an entity from which it is possible to obtain cards.
- * This version is cloneable
+ * Represents a performance that can take place in a theater. All implementations
+ * of this interface should be immutable.
  */
-public interface CardSource extends Cloneable {
-  /**
-   * Returns a card from the source.
-   *
-   * @return The next available card.
-   * @pre !isEmpty()
-   */
-  Card draw();
-
-  /**
-   * @return True if there is no card in the source.
-   */
-  boolean isEmpty();
-
-  CardSource clone();
+public interface Show
+{
+	/**
+	 * @return A description of the show.
+	 */
+	String description();
+	
+	
+	/**
+	 * @return The running time of the show, in minutes.
+	 */
+	int runningTime();
+	
+	Show copy();
 }

@@ -11,6 +11,9 @@
  *******************************************************************************/
 package chapter6;
 
+
+import chapter4.Card;
+
 /**
  * A deck that logs cards when they are drawn. 
  * Although an implementing class of CardSource,

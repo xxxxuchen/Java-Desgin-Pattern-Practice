@@ -11,6 +11,8 @@
  *******************************************************************************/
 package chapter6;
 
+import chapter4.Card;
+
 /**
  * A CardSource decorator that logs cards drawn from the
  * source.

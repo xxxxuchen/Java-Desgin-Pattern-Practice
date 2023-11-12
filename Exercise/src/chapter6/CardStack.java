@@ -14,6 +14,7 @@ package chapter6;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import chapter4.Card;
 
 /**
  * Represents a general-purpose stack of cards. New CardStack

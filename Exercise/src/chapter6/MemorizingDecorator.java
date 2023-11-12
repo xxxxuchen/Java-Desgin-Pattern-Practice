@@ -11,9 +11,11 @@
  *******************************************************************************/
 package chapter6;
 
+import chapter4.Card;
+
 import java.util.ArrayList;
 import java.util.List;
-
+import chapter4.Card;
 /**
  * A CardSource decorator that memorizes cards drawn from the
  * source.

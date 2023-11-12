@@ -9,15 +9,14 @@
  *
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter6;
+package chapter7;
 
 import chapter4.Card;
 
 /**
  * Represents an entity from which it is possible to obtain cards.
- * This version is cloneable
  */
-public interface CardSource extends Cloneable {
+public interface CardSource {
   /**
    * Returns a card from the source.
    *
@@ -30,6 +29,4 @@ public interface CardSource extends Cloneable {
    * @return True if there is no card in the source.
    */
   boolean isEmpty();
-
-  CardSource clone();
 }
