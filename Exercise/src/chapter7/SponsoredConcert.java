@@ -15,7 +15,7 @@ public class SponsoredConcert extends Concert
 	@Override
 	public String description()
 	{
-		return String.format("%s by %s sponsored by %s", title(), aPerformer, aSponsor);
+		return String.format("%s by %s sponsored by %s", super.title(), aPerformer, aSponsor);
 	}
 	
 	@Override

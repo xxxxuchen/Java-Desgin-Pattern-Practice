@@ -9,26 +9,13 @@
  * 
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter7;
-
-
-import chapter4.Card;
+package chapter8;
 
 /**
- * Decorator that prints the card drawn on the console.
+ * Represents the suit of a playing card.
  */
-public class LoggingDecorator extends AbstractDecorator
-{
-	public LoggingDecorator(CardSource pElement)
-	{
-		super(pElement);
-	}
-	
-	@Override
-	public Card draw()
-	{
-		Card card = super.draw();
-		System.out.println(String.format("Draws %s", card));
-		return card;
-	}
+public enum Suit 
+{ 
+	CLUBS, DIAMONDS, SPADES, HEARTS;
 }
+

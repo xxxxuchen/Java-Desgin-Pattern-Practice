@@ -9,26 +9,17 @@
  * 
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter7;
-
-
-import chapter4.Card;
+package chapter8;
 
 /**
- * Decorator that prints the card drawn on the console.
+ * Defines the ability to visit all types of card sources in
+ * a composite structure.
  */
-public class LoggingDecorator extends AbstractDecorator
+public interface CardSourceVisitor
 {
-	public LoggingDecorator(CardSource pElement)
-	{
-		super(pElement);
-	}
-	
-	@Override
-	public Card draw()
-	{
-		Card card = super.draw();
-		System.out.println(String.format("Draws %s", card));
-		return card;
-	}
+	void visitCompositeCardSource(CompositeCardSource pCompositeCardSource);
+
+	void visitDeck(Deck pDeck);
+
+	void visitCardSequence(CardSequence pCardSequence);
 }

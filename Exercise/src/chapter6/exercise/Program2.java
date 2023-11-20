@@ -16,7 +16,7 @@ public class Program2
 		Program2 p = new Program2();
 		Show nullShow = p.get(Day.FRIDAY);
 		Show copy = nullShow.copy();
-		System.out.println(copy.getClass().getName());
+		System.out.println(p.isNull(copy));
 	}
 	
 	private final EnumMap<Day, Show> aShows = new EnumMap<>(Day.class);

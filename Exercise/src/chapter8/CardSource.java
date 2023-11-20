@@ -9,26 +9,31 @@
  * 
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter7;
-
-
-import chapter4.Card;
+package chapter8;
 
 /**
- * Decorator that prints the card drawn on the console.
+ * Represents an entity from which it is possible to obtain cards.
+ * This version is visitable.
  */
-public class LoggingDecorator extends AbstractDecorator
+public interface CardSource
 {
-	public LoggingDecorator(CardSource pElement)
-	{
-		super(pElement);
-	}
+	/**
+	 * Returns a card from the source.
+	 *
+	 * @return The next available card.
+	 * @pre !isEmpty()
+	 */
+	Card draw();
 	
-	@Override
-	public Card draw()
-	{
-		Card card = super.draw();
-		System.out.println(String.format("Draws %s", card));
-		return card;
-	}
+	/**
+	 * @return True if there is no card in the source.
+	 */
+	boolean isEmpty();
+	
+	/**
+	 * Accepts a visitor for traversal into this structure.
+	 * 
+	 * @param pVisitor The visitor to accept
+	 */
+	void accept(CardSourceVisitor pVisitor);
 }

@@ -9,26 +9,38 @@
  * 
  * See http://creativecommons.org/licenses/by-nc-nd/4.0/
  *******************************************************************************/
-package chapter7;
-
-
-import chapter4.Card;
+package chapter8;
 
 /**
- * Decorator that prints the card drawn on the console.
+ * A visitor to compute the total number of cards in a card 
+ * source.
  */
-public class LoggingDecorator extends AbstractDecorator
+public class CountingVisitor extends AbstractCardSourceVisitor
 {
-	public LoggingDecorator(CardSource pElement)
-	{
-		super(pElement);
-	}
+	private int aCount = 0;
 	
 	@Override
-	public Card draw()
+	public void visitDeck(Deck pDeck)
 	{
-		Card card = super.draw();
-		System.out.println(String.format("Draws %s", card));
-		return card;
+		for( @SuppressWarnings("unused") Card card : pDeck)
+		{
+			aCount++;
+		}
+	}
+
+	@Override
+	public void visitCardSequence(CardSequence pCardSequence)
+	{
+		aCount += pCardSequence.size();
+	}
+	
+	public int getCount() 
+	{ 
+		return aCount; 
+	}
+	
+	public void reset()
+	{
+		aCount = 0;
 	}
 }

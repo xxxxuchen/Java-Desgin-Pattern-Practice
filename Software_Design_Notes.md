@@ -111,10 +111,12 @@ we want a command that execute on the target object, which is Program in this ca
 how to reference the information we need in the SetCommand class?
 
 - we can pass the parameter to the execute() method -- not a good idea
-- we can pass the patameter into the SetCommand constructor -- better
+- we can pass the parameter into the SetCommand constructor -- better
 - use *non-static* factory method to create an anonymous command class
 
 类似于一个command对象包装了target类里的方法
 `createSetCommand` `createClearCommand`
 需要在工厂匿名类里面使用Program.this.method()来调用外部类的方法
+
+## chapter 8 - Nov 15
 
