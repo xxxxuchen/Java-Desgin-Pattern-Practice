@@ -18,9 +18,9 @@ public class Driver
 	{
 		CardSource root = createSampleSource();
 		
-		// Basic printing 
+		// Basic printing
 		root.accept(new PrintVisitor());
-		
+
 		// Containment checking
 		ChecksContainmentVisitor visitor = new ChecksContainmentVisitor(Card.get(Rank.ACE, Suit.CLUBS));
 		root.accept(visitor);
@@ -29,7 +29,7 @@ public class Driver
 		visitor.reset();
 		sequence.accept(visitor);
 		System.out.println(visitor.contains());
-		
+
 		// Counts cards
 		CountingVisitor visitor2 = new CountingVisitor();
 		root.accept(visitor2);
@@ -41,7 +41,7 @@ public class Driver
 		// Fancy printing
 		root.accept(new StructurePrinterVisitor());
 		sequence.accept(new StructurePrinterVisitor());
-		
+
 		// Defining an anonymous visitor which prints the number
 		// of cards in card sequences found embedded in the source.
 		CardSourceVisitor visitor3 = new AbstractCardSourceVisitor()
